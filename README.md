@@ -8,11 +8,12 @@
 |Password|varchar|null: false|
 
 ### Assosiation
+- has_many :groups, through: :groups_users
 - has_many :groups_users
 - has_many :messages
 
 
-## gruopテーブル
+## groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -21,6 +22,7 @@
 |name|varchar|null: false, index: true|
 
 ### Assosiation
+- has_many :users, through: :groups_users
 - has_many :groups_users
 - has_many :messages
 
