@@ -2,8 +2,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|interger|foreign_key: true|
-|name|varchar|null: false|
+|name|string|null: false|
 |Email|varchar|null: false|
 |Password|varchar|null: false|
 
@@ -17,9 +16,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_id|interger|foreign_key: true|
-|group_name|varchar|null: false|
-|name|varchar|null: false, index: true|
+|name|string|null: false, index: true|
 
 ### Assosiation
 - has_many :users, through: :groups_users
@@ -45,8 +42,8 @@
 |------|----|-------|
 |body|text||
 |image|string||
-|group_id|interger|foreign_key: ture|
-|users_id|interger|foreign_key: ture|
+|group_id|interger|null: false, foreign_key: ture|
+|user_id|interger|null: false, foreign_key: ture|
 
 ### Assosiation
 - belongs_to :group
