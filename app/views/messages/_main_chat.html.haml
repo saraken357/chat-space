@@ -1,0 +1,31 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__current-group
+        test
+      %ul.main-header__left-box__member-list
+        Member：
+        %li.main-header__left-box__member-list__member
+          masa
+    %a{:href => "#"}
+      .main-header__edit-btn Edit
+  .messages
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker saraken1
+        %p.message__upper-info__date 2020/01/28(Tue) 04:32:07
+      %p.message__text hi1
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker saraken2
+        %p.message__upper-info__date 2020/01/28(Tue) 04:35:07
+      %p.message__text hi2
+  .form
+    %form.new_message
+      %input.input-box{type: "hidden"}
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('far', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn", value: "Send"}
