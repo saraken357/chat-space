@@ -7,8 +7,9 @@
         Member：
         %li.main-header__left-box__member-list__member
           masa
-    %a{:href => "#"}
-      .main-header__edit-btn Edit
+    = link_to "#", class: "main-header__edit-btn" do
+      .main-header__edit-btn__edit
+        Edit
   .messages
     .message
       .message__upper-info

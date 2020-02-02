@@ -90,6 +90,7 @@ $default-px40: 40px;
       }
     }
     &__edit-btn{
+      text-decoration: none;
       height: $default-px40;
       line-height: $default-px40;
       padding: 0 $default-px20;
